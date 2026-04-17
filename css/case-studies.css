@@ -1,0 +1,32 @@
+/* ============================================================
+   CASE-STUDIES.CSS — case-studies.html only
+   ============================================================ */
+
+.filter-tabs { max-width: 1100px; margin: 0 auto 2.5rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+.filter-tab {
+  padding: .45rem 1.2rem; border: 1px solid var(--border); border-radius: 100px;
+  font-size: .8rem; color: var(--text-muted); cursor: pointer;
+  transition: border-color .3s, color .3s, background .3s;
+  background: none; font-family: var(--sans);
+}
+.filter-tab:hover, .filter-tab.active { border-color: var(--accent); color: var(--accent); background: rgba(201,240,107,.06); }
+
+.cases-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.case-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden; transition: border-color .4s, transform .4s;
+  display: flex; flex-direction: column;
+}
+.case-card:hover { border-color: rgba(201,240,107,.15); transform: translateY(-3px); }
+.case-content { padding: 1.75rem; display: flex; flex-direction: column; flex: 1; }
+.case-tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .15em; color: var(--accent); margin-bottom: .6rem; display: inline-flex; align-items: center; gap: .5rem; }
+.case-tag::before { content: ''; width: 12px; height: 1px; background: var(--accent); }
+.case-content h3 { font-family: var(--serif); font-size: 1.15rem; margin-bottom: .5rem; line-height: 1.25; }
+.case-content p { font-size: .83rem; color: var(--text-muted); line-height: 1.7; flex: 1; margin-bottom: 1rem; }
+.case-metrics { display: flex; gap: 1.25rem; flex-wrap: wrap; padding-top: .75rem; border-top: 1px solid var(--border); margin-bottom: 1rem; }
+.case-metric-val { font-family: var(--serif); font-size: 1.25rem; color: var(--accent); line-height: 1.1; }
+.case-metric-label { font-size: .65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin-top: .15rem; }
+.case-link { font-size: .82rem; color: var(--accent); display: inline-flex; align-items: center; gap: .4rem; transition: gap .3s; margin-top: auto; }
+.case-link:hover { gap: .7rem; }
+
+@media (max-width: 900px) { .cases-grid { grid-template-columns: 1fr; } }

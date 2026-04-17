@@ -1,0 +1,73 @@
+/* ============================================================
+   CASE-STUDY.CSS — individual case study pages
+   ============================================================ */
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  max-width: 1100px; margin: 0 auto; padding: 6rem 0 0;
+  display: flex; align-items: center; gap: .5rem;
+  font-size: .8rem; color: var(--text-muted);
+}
+.breadcrumb a { color: var(--text-muted); transition: color .3s; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { color: var(--text-muted); }
+.breadcrumb .current { color: var(--text); }
+
+/* ── CS HERO ── */
+.cs-hero { padding: 2rem 2.5rem 4rem; }
+.cs-hero-inner { max-width: 1100px; margin: 0 auto; }
+.cs-tag {
+  font-size: .75rem; text-transform: uppercase; letter-spacing: .15em; color: var(--accent);
+  margin-bottom: 1rem; display: inline-flex; align-items: center; gap: .5rem;
+}
+.cs-tag::before { content: ''; width: 16px; height: 1px; background: var(--accent); }
+.cs-hero h1 {
+  font-family: var(--serif); font-size: clamp(2rem,5vw,3.5rem);
+  line-height: 1.05; letter-spacing: -.03em; margin-bottom: 1rem;
+}
+.cs-hero h1 em { font-style: italic; color: var(--accent); }
+.cs-hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; line-height: 1.8; }
+
+/* ── METRIC STRIP ── */
+.cs-metrics { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2.5rem; }
+.cs-metrics-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; }
+.cs-metric { text-align: center; }
+.cs-metric-val { font-family: var(--serif); font-size: clamp(1.8rem,3.5vw,2.8rem); color: var(--accent); letter-spacing: -.02em; line-height: 1.1; }
+.cs-metric-label { font-size: .75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .12em; margin-top: .4rem; }
+
+/* ── SCREENSHOT ── */
+.screenshot-block { max-width: 1100px; margin: 4rem auto; padding: 0 2.5rem; }
+.screenshot-block img { width: 100%; border-radius: 12px; border: 1px solid var(--border); }
+.screenshot-block.placeholder img { display: none; }
+.screenshot-block.placeholder::after {
+  content: 'Drop your GSC screenshot into images/';
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; min-height: 320px;
+  background: var(--bg-card); border: 1px dashed var(--border); border-radius: 12px;
+  font-size: .85rem; color: var(--text-muted); text-align: center;
+  padding: 2rem;
+}
+.screenshot-caption { font-size: .78rem; color: var(--text-muted); margin-top: .75rem; text-align: center; letter-spacing: .05em; }
+
+/* ── STORY ── */
+.cs-story { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem 4rem; display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+.cs-story-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+.cs-story-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .15em; color: var(--accent); margin-bottom: 1rem; }
+.cs-story-section h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: .75rem; }
+.cs-story-section p { font-size: .88rem; color: var(--text-muted); line-height: 1.75; }
+.cs-story-section ul { list-style: none; padding: 0; }
+.cs-story-section ul li { font-size: .88rem; color: var(--text-muted); line-height: 1.75; padding-left: 1.2rem; position: relative; margin-bottom: .3rem; }
+.cs-story-section ul li::before { content: '&#8594;'; position: absolute; left: 0; color: var(--accent); font-size: .8rem; }
+
+/* ── CS CTA BAR ── */
+.cs-cta { background: var(--bg-card); border-top: 1px solid var(--border); padding: 4rem 2.5rem; text-align: center; }
+.cs-cta h2 { font-family: var(--serif); font-size: clamp(1.6rem,3vw,2.4rem); margin-bottom: .75rem; }
+.cs-cta p { color: var(--text-muted); font-size: .95rem; margin-bottom: 2rem; }
+.cs-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .cs-metrics-inner { grid-template-columns: repeat(2,1fr); }
+  .cs-story { grid-template-columns: 1fr; }
+  .breadcrumb, .cs-hero, .screenshot-block, .cs-story { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .cs-cta { padding: 3rem 1.5rem; }
+}
