@@ -49,6 +49,9 @@
 }
 .screenshot-caption { font-size: .78rem; color: var(--text-muted); margin-top: .75rem; text-align: center; letter-spacing: .05em; }
 
+/* Second screenshot sits closer to the first */
+.screenshot-block + .screenshot-block { margin-top: 1.5rem; }
+
 /* ── STORY ── */
 .cs-story { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem 4rem; display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
 .cs-story-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
