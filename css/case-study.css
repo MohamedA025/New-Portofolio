@@ -60,7 +60,7 @@
 .cs-story-section p { font-size: .88rem; color: var(--text-muted); line-height: 1.75; }
 .cs-story-section ul { list-style: none; padding: 0; }
 .cs-story-section ul li { font-size: .88rem; color: var(--text-muted); line-height: 1.75; padding-left: 1.2rem; position: relative; margin-bottom: .3rem; }
-.cs-story-section ul li::before { content: '&#8594;'; position: absolute; left: 0; color: var(--accent); font-size: .8rem; }
+.cs-story-section ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: .8rem; }
 
 /* ── CS CTA BAR ── */
 .cs-cta { background: var(--bg-card); border-top: 1px solid var(--border); padding: 4rem 2.5rem; text-align: center; }
